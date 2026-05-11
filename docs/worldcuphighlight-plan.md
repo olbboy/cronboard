@@ -601,14 +601,14 @@ worldcuphighlight/
 
 ## 15.5 Tiến độ thực thi (Implementation progress) — 11/05/2026
 
-Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **1,289 static pages**.
+Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **1,354 static pages**.
 
 | Hạng mục | Trạng thái | Ghi chú |
 |----------|------------|---------|
 | Astro 5 + Tailwind 3 + MDX skeleton | ✅ Done | TypeScript strict + `~/*` alias |
 | i18n 5 ngôn ngữ (en/es/pt/fr/vi) | ✅ Done | `astro:i18n` + hreflang đầy đủ |
 | BaseLayout (canonical, OG, JSON-LD) | ✅ Done | Default OG = original SVG art |
-| Header / Footer / MediaCredit | ✅ Done | + `TimezoneKickoff` island |
+| Header / Footer / MediaCredit / TimezoneKickoff / NewsletterSignup | ✅ Done | Footer mở rộng 4 cột với newsletter inline |
 | 22 trang lịch sử (1930–2022) | ✅ Done | Auto-gen từ `scripts/ingest-openfootball.ts` |
 | Cornerstone article 2026 Complete Guide | ✅ Done | 3,400+ từ |
 | Golden Boot cluster (22 + index) | ✅ Done | `Person`/award JSON-LD |
@@ -622,13 +622,15 @@ Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (ch
 | **H2H pages generator (1,128 trang)** | ✅ Done | Canonical slug alphabet hoá, `SportsEvent` JSON-LD, marquee hub tại `/h2h/` |
 | **Bracket Builder v0** | ✅ Done | 12 groups → R32 → Final, localStorage + share URL hash |
 | **PWA (manifest + icons + service worker)** | ✅ Done | Network-first navigation + SWR `/_astro/` + `/offline/` fallback |
-| AdSense application | ⏳ Pending | 1,289 pages — apply ngay |
-| Daily Quiz engine + 30 ngày content | ⏳ Pending | Tuần 3 còn lại |
-| Sticker Album v0 (10 sticker gốc) | ⏳ Pending | Tuần 3 |
-| Web Push opt-in (goal alerts) | ⏳ Pending | Tuần 3 |
-| Newsletter setup (Buttondown) | ⏳ Pending | Tuần 3 |
-| On This Day generator + Twitter bot | ⏳ Pending | Tuần 3 |
-| Bracket → D1 + Lucia auth (migrate khỏi localStorage) | ⏳ Pending | Tuần 3 |
+| **Daily Quiz engine + 10 ngày × 10 questions** | ✅ Done | `Quiz` JSON-LD, click-to-reveal, sticker reward khi đạt 8/10+ |
+| **On This Day generator** | ✅ Done | 52 dates × ~70 events từ 1930 → 2022 |
+| **Sticker Album v0** | ✅ Done | 12 sticker gốc (inline SVG), collect engine từ quiz/bracket/city visits |
+| **Newsletter signup (Buttondown embed)** | ✅ Done | Footer + About; placeholder username, thay khi mở account |
+| AdSense application | ⏳ Pending | 1,354 pages — apply ngay |
+| Daily Quiz scale-out (20+ ngày tiếp) | ⏳ Pending | Engine ready, chỉ thiếu data |
+| On This Day scale-out (~310 ngày còn lại) | ⏳ Pending | Engine ready, chỉ thiếu data |
+| Web Push opt-in (goal alerts) | ⏳ Pending | Cần VAPID + Worker (sau khi switch CF adapter) |
+| Bracket → D1 + Lucia auth | ⏳ Pending | Cần CF adapter + SSR mode |
 | Video pipeline + live score | ⏳ Pending | Tuần 4 |
 
 ---
