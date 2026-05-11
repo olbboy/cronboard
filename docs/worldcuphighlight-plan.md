@@ -601,7 +601,7 @@ worldcuphighlight/
 
 ## 15.5 Tiến độ thực thi (Implementation progress) — 11/05/2026
 
-Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **147 static pages**.
+Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **1,289 static pages**.
 
 | Hạng mục | Trạng thái | Ghi chú |
 |----------|------------|---------|
@@ -616,14 +616,19 @@ Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (ch
 | **48 trang đội tuyển** | ✅ Done | `src/data/teams.ts` + `SportsTeam` schema |
 | **16 trang stadium** | ✅ Done | `src/data/stadiums.ts` + `StadiumOrArena` schema |
 | **Schedule page + timezone switcher** | ✅ Done | 12 groups + headline kickoffs auto local-time |
-| **5 host city travel guides** (NYC, LA, Mexico City, Toronto, Dallas) | ✅ Done | + `FAQPage` schema + affiliate slot |
+| **Host city travel guides (đủ 16 thành phố)** | ✅ Done | NYC, LA, MC, Toronto, Dallas, Atl, Phi, Mia, Bos, Hou, KC, SF, Sea, Van, GDL, MTY |
 | About / Privacy / DMCA / Contact / 404 | ✅ Done | AdSense gate unblocked |
 | robots.txt + sitemap-index | ✅ Done | |
-| 11 host city guides còn lại | ⏳ Pending | Bos, Phila, Mia, Houston, KC, SF, Sea, Atl, Van, GDL, MTY |
-| AdSense application | ⏳ Pending | Đủ pages chất lượng để apply ngay |
-| Bracket builder | ⏳ Pending | Tuần 3 — local-storage MVP trước |
-| 2,256 H2H pages | ⏳ Pending | Tuần 3 generator |
-| PWA + Web Push | ⏳ Pending | Tuần 3 |
+| **H2H pages generator (1,128 trang)** | ✅ Done | Canonical slug alphabet hoá, `SportsEvent` JSON-LD, marquee hub tại `/h2h/` |
+| **Bracket Builder v0** | ✅ Done | 12 groups → R32 → Final, localStorage + share URL hash |
+| **PWA (manifest + icons + service worker)** | ✅ Done | Network-first navigation + SWR `/_astro/` + `/offline/` fallback |
+| AdSense application | ⏳ Pending | 1,289 pages — apply ngay |
+| Daily Quiz engine + 30 ngày content | ⏳ Pending | Tuần 3 còn lại |
+| Sticker Album v0 (10 sticker gốc) | ⏳ Pending | Tuần 3 |
+| Web Push opt-in (goal alerts) | ⏳ Pending | Tuần 3 |
+| Newsletter setup (Buttondown) | ⏳ Pending | Tuần 3 |
+| On This Day generator + Twitter bot | ⏳ Pending | Tuần 3 |
+| Bracket → D1 + Lucia auth (migrate khỏi localStorage) | ⏳ Pending | Tuần 3 |
 | Video pipeline + live score | ⏳ Pending | Tuần 4 |
 
 ---
