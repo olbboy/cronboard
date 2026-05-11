@@ -601,7 +601,7 @@ worldcuphighlight/
 
 ## 15.5 Tiến độ thực thi (Implementation progress) — 11/05/2026
 
-Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **1,354 static pages**.
+Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **1,367 static pages**.
 
 | Hạng mục | Trạng thái | Ghi chú |
 |----------|------------|---------|
@@ -622,13 +622,18 @@ Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (ch
 | **H2H pages generator (1,128 trang)** | ✅ Done | Canonical slug alphabet hoá, `SportsEvent` JSON-LD, marquee hub tại `/h2h/` |
 | **Bracket Builder v0** | ✅ Done | 12 groups → R32 → Final, localStorage + share URL hash |
 | **PWA (manifest + icons + service worker)** | ✅ Done | Network-first navigation + SWR `/_astro/` + `/offline/` fallback |
-| **Daily Quiz engine + 10 ngày × 10 questions** | ✅ Done | `Quiz` JSON-LD, click-to-reveal, sticker reward khi đạt 8/10+ |
+| **Daily Quiz engine + 20 ngày × 10 questions** | ✅ Done | `Quiz` JSON-LD, click-to-reveal, sticker reward khi đạt 8/10+ |
 | **On This Day generator** | ✅ Done | 52 dates × ~70 events từ 1930 → 2022 |
-| **Sticker Album v0** | ✅ Done | 12 sticker gốc (inline SVG), collect engine từ quiz/bracket/city visits |
+| **Sticker Album v0 (22 sticker)** | ✅ Done | Sticker gốc (inline SVG), collect engine từ quiz/bracket/city visits |
 | **Newsletter signup (Buttondown embed)** | ✅ Done | Footer + About; placeholder username, thay khi mở account |
-| AdSense application | ⏳ Pending | 1,354 pages — apply ngay |
-| Daily Quiz scale-out (20+ ngày tiếp) | ⏳ Pending | Engine ready, chỉ thiếu data |
+| **ICS calendar export (`.ics` endpoint)** | ✅ Done | `/calendar/` + `/calendar/headlines.ics` cho Apple/Google/Outlook |
+| **Print-Your-Bracket** | ✅ Done | `/predict/print/` — single-page A4 landscape printable |
+| **Press kit "WC 2026 by the Numbers"** | ✅ Done | `/press/by-the-numbers/` — free data pack cho nhà báo |
+| **RSS feed (blog + quizzes + On This Day)** | ✅ Done | `/rss.xml` — top 80 items |
+| **Social share component** | ✅ Done | X/FB/WhatsApp/Reddit/LinkedIn/Copy trên team/edition/blog pages |
+| AdSense application | ⏳ Pending | 1,367 pages — apply ngay |
 | On This Day scale-out (~310 ngày còn lại) | ⏳ Pending | Engine ready, chỉ thiếu data |
+| Daily Quiz scale-out (10+ ngày tiếp) | ⏳ Pending | Engine ready, chỉ thiếu data |
 | Web Push opt-in (goal alerts) | ⏳ Pending | Cần VAPID + Worker (sau khi switch CF adapter) |
 | Bracket → D1 + Lucia auth | ⏳ Pending | Cần CF adapter + SSR mode |
 | Video pipeline + live score | ⏳ Pending | Tuần 4 |
