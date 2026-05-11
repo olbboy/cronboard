@@ -599,6 +599,35 @@ worldcuphighlight/
 
 ---
 
+## 15.5 Tiến độ thực thi (Implementation progress) — 11/05/2026
+
+Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **147 static pages**.
+
+| Hạng mục | Trạng thái | Ghi chú |
+|----------|------------|---------|
+| Astro 5 + Tailwind 3 + MDX skeleton | ✅ Done | TypeScript strict + `~/*` alias |
+| i18n 5 ngôn ngữ (en/es/pt/fr/vi) | ✅ Done | `astro:i18n` + hreflang đầy đủ |
+| BaseLayout (canonical, OG, JSON-LD) | ✅ Done | Default OG = original SVG art |
+| Header / Footer / MediaCredit | ✅ Done | + `TimezoneKickoff` island |
+| 22 trang lịch sử (1930–2022) | ✅ Done | Auto-gen từ `scripts/ingest-openfootball.ts` |
+| Cornerstone article 2026 Complete Guide | ✅ Done | 3,400+ từ |
+| Golden Boot cluster (22 + index) | ✅ Done | `Person`/award JSON-LD |
+| Where-to-Watch (20 quốc gia) | ✅ Done | `FAQPage` schema + affiliate hooks |
+| **48 trang đội tuyển** | ✅ Done | `src/data/teams.ts` + `SportsTeam` schema |
+| **16 trang stadium** | ✅ Done | `src/data/stadiums.ts` + `StadiumOrArena` schema |
+| **Schedule page + timezone switcher** | ✅ Done | 12 groups + headline kickoffs auto local-time |
+| **5 host city travel guides** (NYC, LA, Mexico City, Toronto, Dallas) | ✅ Done | + `FAQPage` schema + affiliate slot |
+| About / Privacy / DMCA / Contact / 404 | ✅ Done | AdSense gate unblocked |
+| robots.txt + sitemap-index | ✅ Done | |
+| 11 host city guides còn lại | ⏳ Pending | Bos, Phila, Mia, Houston, KC, SF, Sea, Atl, Van, GDL, MTY |
+| AdSense application | ⏳ Pending | Đủ pages chất lượng để apply ngay |
+| Bracket builder | ⏳ Pending | Tuần 3 — local-storage MVP trước |
+| 2,256 H2H pages | ⏳ Pending | Tuần 3 generator |
+| PWA + Web Push | ⏳ Pending | Tuần 3 |
+| Video pipeline + live score | ⏳ Pending | Tuần 4 |
+
+---
+
 # APPENDIX A — Mở rộng brainstorm (creative arsenal)
 
 ## A1. Tính năng "đào vàng" SEO ít cạnh tranh
