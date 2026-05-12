@@ -601,7 +601,7 @@ worldcuphighlight/
 
 ## 15.5 Tiến độ thực thi (Implementation progress) — 11/05/2026
 
-Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **1,416 static pages**.
+Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **1,420 static pages**.
 
 | Hạng mục | Trạng thái | Ghi chú |
 |----------|------------|---------|
@@ -641,7 +641,13 @@ Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (ch
 | **Workers backplane: OG image generator** | ✅ Done | 5 card templates (team/match/bracket/quiz/h2h), edge-cached 12h |
 | **D1 schema (migrations)** | ✅ Done | `match_videos`, `push_subscriptions`, `bracket_picks`, `live_scores`, `audit_log` |
 | **Astro hooks: LiveScoreRail + PushOptIn** | ✅ Done | Tự ẩn nếu `PUBLIC_WCH_*_URL` env chưa set |
-| AdSense application | ⏳ Pending | 1,416 pages — apply ngay |
+| **Workers backplane: Bracket persistence + leaderboard** | ✅ Done | `wch-bracket` worker, anonymous client-UUID, `/predict/leaderboard/` page |
+| **ELO predictor (`/predict/elo/`)** | ✅ Done | Client-side Monte Carlo, 10k trials, champion/final/SF/QF probabilities |
+| **Anthems page (`/anthems/`)** | ✅ Done | 1962 → 2026, original commentary, outbound YouTube links |
+| **Trophy Lore page (`/trophy/`)** | ✅ Done | Jules Rimet + Gazzaniga history (Pickles, the 1983 theft, the wartime shoebox) |
+| **Cloudflare Pages prod config (`_headers`, `_redirects`)** | ✅ Done | HSTS, immutable `_astro/*`, MIME types; www→apex |
+| **Setup script (`scripts/setup-cloudflare.sh`)** | ✅ Done | D1 create + migrations + KV namespaces in one shot |
+| AdSense application | ⏳ Pending | 1,420 pages — apply ngay |
 | On This Day scale-out (~310 ngày còn lại) | ⏳ Pending | Engine ready, chỉ thiếu data |
 | Daily Quiz scale-out (10+ ngày tiếp) | ⏳ Pending | Engine ready, chỉ thiếu data |
 | Bracket → D1 + Lucia auth | ⏳ Pending | Bảng `bracket_picks` đã có sẵn, cần thêm Worker auth/save endpoint |
