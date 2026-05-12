@@ -635,12 +635,17 @@ Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (ch
 | **Coaches archive (16 lịch sử + current)** | ✅ Done | Pozzo 1934 → Scaloni 2022, theo era |
 | **Mascot Museum (1966 → 2026)** | ✅ Done | Text-only treatment (không reproduce trademarked artwork) |
 | **Group Scenarios Calculator** | ✅ Done | Tiebreaker logic: P → GD → GS → H2H; matchday-3 sim |
+| **Workers backplane: YouTube RSS poller** | ✅ Done | Cron mỗi 5 phút, 14 broadcaster channels, fuzzy match → D1 `match_videos` |
+| **Workers backplane: Live score** | ✅ Done | API-Football primary + football-data fallback, KV cache 30s, D1 persist |
+| **Workers backplane: Web Push (VAPID)** | ✅ Done | Tự viết VAPID + aes128gcm RFC 8291 trên WebCrypto, không lib ngoài |
+| **Workers backplane: OG image generator** | ✅ Done | 5 card templates (team/match/bracket/quiz/h2h), edge-cached 12h |
+| **D1 schema (migrations)** | ✅ Done | `match_videos`, `push_subscriptions`, `bracket_picks`, `live_scores`, `audit_log` |
+| **Astro hooks: LiveScoreRail + PushOptIn** | ✅ Done | Tự ẩn nếu `PUBLIC_WCH_*_URL` env chưa set |
 | AdSense application | ⏳ Pending | 1,416 pages — apply ngay |
 | On This Day scale-out (~310 ngày còn lại) | ⏳ Pending | Engine ready, chỉ thiếu data |
 | Daily Quiz scale-out (10+ ngày tiếp) | ⏳ Pending | Engine ready, chỉ thiếu data |
-| Web Push opt-in (goal alerts) | ⏳ Pending | Cần VAPID + Worker (sau khi switch CF adapter) |
-| Bracket → D1 + Lucia auth | ⏳ Pending | Cần CF adapter + SSR mode |
-| Video pipeline + live score | ⏳ Pending | Tuần 4 |
+| Bracket → D1 + Lucia auth | ⏳ Pending | Bảng `bracket_picks` đã có sẵn, cần thêm Worker auth/save endpoint |
+| Workers deploy + Cloudflare env vars | ⏳ Pending | User chạy `wrangler deploy` cho 4 workers + set `PUBLIC_WCH_*_URL` |
 
 ---
 
