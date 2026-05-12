@@ -601,7 +601,7 @@ worldcuphighlight/
 
 ## 15.5 Tiến độ thực thi (Implementation progress) — 11/05/2026
 
-Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **1,367 static pages**.
+Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (chưa init git để user tự `gh repo create`). Build verified: **1,416 static pages**.
 
 | Hạng mục | Trạng thái | Ghi chú |
 |----------|------------|---------|
@@ -630,8 +630,12 @@ Site được scaffold ở thư mục riêng `/home/user/worldcuphighlight/` (ch
 | **Print-Your-Bracket** | ✅ Done | `/predict/print/` — single-page A4 landscape printable |
 | **Press kit "WC 2026 by the Numbers"** | ✅ Done | `/press/by-the-numbers/` — free data pack cho nhà báo |
 | **RSS feed (blog + quizzes + On This Day)** | ✅ Done | `/rss.xml` — top 80 items |
-| **Social share component** | ✅ Done | X/FB/WhatsApp/Reddit/LinkedIn/Copy trên team/edition/blog pages |
-| AdSense application | ⏳ Pending | 1,367 pages — apply ngay |
+| **Social share component** | ✅ Done | X/FB/WhatsApp/Reddit/LinkedIn/Copy trên team/edition/blog/player/coach/mascot pages |
+| **Players cluster (29 marquee profiles)** | ✅ Done | `src/data/players.ts` + `Person` JSON-LD + back-link từ team pages |
+| **Coaches archive (16 lịch sử + current)** | ✅ Done | Pozzo 1934 → Scaloni 2022, theo era |
+| **Mascot Museum (1966 → 2026)** | ✅ Done | Text-only treatment (không reproduce trademarked artwork) |
+| **Group Scenarios Calculator** | ✅ Done | Tiebreaker logic: P → GD → GS → H2H; matchday-3 sim |
+| AdSense application | ⏳ Pending | 1,416 pages — apply ngay |
 | On This Day scale-out (~310 ngày còn lại) | ⏳ Pending | Engine ready, chỉ thiếu data |
 | Daily Quiz scale-out (10+ ngày tiếp) | ⏳ Pending | Engine ready, chỉ thiếu data |
 | Web Push opt-in (goal alerts) | ⏳ Pending | Cần VAPID + Worker (sau khi switch CF adapter) |
